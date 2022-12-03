@@ -13,7 +13,7 @@
     "uploader"
   ],
   "website": "kalanakt.github.io/projects/telegram/all-url-uploader ",
-  "repository": "https://github.com/kalanakt/All-Url-Uploader",
+  "repository": "https://github.com/hardeepsingh62/All-Url-Uploader",
   "env": {
     "WEBHOOK": {
       "description": "Don't Need To change - Setting this to True when in env mode",
