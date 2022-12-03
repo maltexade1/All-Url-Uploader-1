@@ -1,9 +1,12 @@
-FROM python:3.10.6-slim-buster
+FROM python:3.8-slim-buster
 
-WORKDIR .
-COPY . .
+RUN apt update && apt upgrade -y
+RUN apt install git -y
+COPY requirements.txt /requirements.txt
 
-RUN pip3 install -r requirements.txt
-
-CMD ["python3", "bot.py"]
-
+RUN cd /
+RUN pip3 install -U pip && pip3 install -U -r requirements.txt
+RUN mkdir /All-Url-Uploader
+WORKDIR /All-Url-Uploader
+COPY start.sh /start.sh
+CMD ["/bin/bash", "/start.sh"]
